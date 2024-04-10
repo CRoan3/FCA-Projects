@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1 id="title">Athlete Intake Form</h1>
+    <p id="description">Please fill out this athlete intake form.</p>
+    <form id="survey-form" method="post" action="https://register-demo.freecodecamp.org">
+      <label id="name-label" for="name">
+        Enter Your Full Name:
+        <input id="name"   name="name" type="text" placeholder="Enter full name..." required
+        />
+      </label>
+      <label id="email-label" for="email">Enter Your Email Address:
+        <input id="email"   name="email" type="email" placeholder="Enter email address..."required
+        />
+      </label>
+      <label id="number-label" for="number">Input your age (years):
+        <input id="number" type="number" name="number" min="13" max="120" pattern="[0-9]"" placeholder="Enter Age" required
+        />
+      </label>
+       <label>Select Training Status:   
+         <select id="dropdown">
+          <option>(select one)</option>
+          <option>Beginner (<1 year)</option>
+          <option>Intermediate (1-3 years)
+          </option>
+          <option>Advanced (>3 years)</option>
+        </select>
+        <fieldset>
+          <legend>Desired Training Location</legend>
+          <label>In-person
+            <input id="in-person" type="radio" name="remote-inperson" class="inline" value="in-person" checked/>
+          </label>
+          <label>Remote (Online)
+            <input id="remote" type="radio" name="remote-inperson" class="inline" value="remote"/>
+          </label>
+        </fieldset>
+        <label for="bio"
+          >Exercise history:
+          <textarea
+            id="bio"
+            name="bio"
+            rows="3"
+            cols="30"
+            placeholder="Please provide additional information..."
+          ></textarea>
+        </label>
+        <label for="terms-and-conditions">
+          <input
+          class="inline"
+          id="terms-and-conditions"
+          type="checkbox"
+          required
+          name="terms-and-conditions" 
+          value="terms-and-conditions"
+        />
+        I accept the
+        <a href="https://www.freecodecamp.org/news/terms-of-service/"
+          >terms and conditions</a
+        >.
+        </label>
+        <label for="nda">
+          <input
+          class="inline"
+          id="nda"
+          type="checkbox"
+          required
+          name="nda"
+          value="nda"
+        />
+        I will not share any given material with anyone.
+        </label>
+        <input type="submit" value="Submit" id="submit"/>
+    </form>
+  </body>
+</html>
